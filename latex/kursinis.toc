@@ -1,0 +1,31 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\defcounter {refsection}{0}\relax 
+\select@language {lithuanian}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{Įvadas}{2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1.}Aerodinamika}{3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.1.}Ornitopterio plasnojimo dinamikos schema}{3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.2.}Sparnų aerodinamikos skaičiavimai}{3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.3.}Teoriniai ornitopterio aerodinaminiai duomenys}{3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.}Ornitopterio grandinės schema}{6}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.}Dar šiek tiek teorijos}{7}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.1.}Darbas su Bandomąja lenta}{7}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.2.}Komponenčių fizinių duomenų matavimas naudojantis multimetru}{8}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.}Naudotos detalės}{10}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.1.}Mikrokontroleris}{10}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.2.}Motoras}{10}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.}Programos kodas}{11}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{Rezultatai ir išvados}{12}
