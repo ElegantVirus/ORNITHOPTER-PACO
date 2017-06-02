@@ -24,7 +24,6 @@
 \secondauthor{Karolis Šimaitis} 
 \supervisor{lekt. Irus Grinis}
 \date{Vilnius – \the\year}
-
 \bibliography{bibliografija}
 
 \begin{document}
@@ -37,39 +36,95 @@ Ornitopteris - (ornito- + gr. pteron - sparnas) - aparatas, kuris skraidymui pas
 Taigi, tiriamojo seminaro darbo tikslas - susipažinti su robotų konstravimu bei programavimu; pagaminti roboto - ornitopterio, prototipą. 
 
 \section{Aerodinamika}
-Kaip ornitopteris sukuria keliamąją ir varomąsias jėgas, nors jis plasnoja į abi puses? Šį klausimą aprašo ir bando pateikti atsakymą Horst Räbiger savo knygoje, kuria dalinai remsimės savo ornitopteriui tobulinti. Knygoje pateiktos išvados remiasi įvairiais žinomais tyrimais. Be plasnojimo aerodinamikos, taip pat turime įvertinti ir plasnojančio sparno dinamiką.
+Kaip ornitopteris sukuria keliamąją ir varomąsias jėgas, nors jis plasnoja į abi puses? Šį klausimą aprašo ir bando pateikti atsakymą Horst Räbiger savo knygoje \cite{2}, kuria dalinai remsimės savo ornitopteriui tobulinti. Knygoje pateiktos išvados remiasi įvairiais žinomais tyrimais. Be plasnojimo aerodinamikos, taip pat turime įvertinti ir plasnojančio sparno dinamiką.
 
 \subsection{Ornitopterio plasnojimo dinamikos schema}
-\includegraphics{img/vortex}\\
+
+\begin{figure}[h]
+\caption{Plasnojimo žemyn ir aukštyn sukuriamų oro srautų dinamika. Viršuje pažymėti intervalai atitinka mostą aukštyn (upstroke) ir mostą žemyn (downstroke) .}
+\centering
+\includegraphics{img/vortex}\cite{7}\\
+\end{figure}
 
 \subsection{Sparnų aerodinamikos skaičiavimai}
 Visų pirma, sparnas yra menamai padalinamas į labai siauras juosteles. Tada kiekvienai iš šių juostelių apskaičiuojamas aerodinaminės jegos pastoviomis oro tekmės sąlygomis. Jų suma yra viso sparno pločio integralas.
 Šitaip gauname kilimo ir varomąsias jėgas plasnojančiam sparnui kuriuo nors fiksuotu laiko momentu plasnojimo cikle.
 Šis procesas yra kartojamas lygiais laiko tarpais sparnų mosavimo judesiui, todėl tokie dalykai kaip cirkuliacijos pokyčiai ir ateinančio oro srauto pokyčiai tampa pagrindo dalimi. Tuo pat metu yra laikoma, kad oro tekmė skaičiavimų metu nesikeičia .
-Viso mosto jėgą galime gauti integruodami jėgos progresiją laiko atžvilgiu. Todėl plasnojimas žemyn ir plasnojimas aukštyn apskaičiuojami atskirai ir tai sudaro viso plasnojimo ciklo sukuriamą jėga.
+Viso mosto jėgą galime gauti integruodami jėgos funkciją laiko atžvilgiu. Todėl plasnojimas žemyn ir plasnojimas aukštyn apskaičiuojami atskirai ir tai sudaro viso plasnojimo ciklo sukuriamą jėga. \cite{3}
 
 \subsection{Teoriniai ornitopterio aerodinaminiai duomenys}
-Aerodinamikos duomenys gauti naudojantis ornitopterių aerodinamikai apskaičiuoti skirtu įrankiu Orni1\\
+Aerodinamikos duomenys gauti naudojantis ornitopterių aerodinamikai apskaičiuoti skirtu įrankiu Orni1 \cite{4}\\
+\begin{figure}[h]
+\caption{Ornitopterio duomenys sklendimo metu įvairiems sparnų suskirstymams}
+\centering
 \includegraphics[scale=0.9]{img/gliding}\\
-\includegraphics[scale=0.9]{img/upstroke}\\
-\includegraphics[scale=0.9]{img/downstroke}\\
-\includegraphics[scale=0.9]{img/liftforce}\\
-\includegraphics[scale=0.9]{img/downwind}\\
-\includegraphics[scale=0.9]{img/angle}\\
+\end{figure}
 
-\section{Ornitopterio grandinės schema}
-\includegraphics[scale=0.9]{img/scheme}\\
+\begin{figure}[h]
+	\caption{Ornitopterio duomenys mosto aukštyn metu įvairiems sparnų suskirstymams}
+	\centering
+	\includegraphics[scale=0.9]{img/upstroke}
+\end{figure}
+
+\begin{figure}[h]
+	\caption{Ornitopterio duomenys mosto žemyn metu įvairiems sparnų suskirstymams}
+	\centering
+	\includegraphics{img/downstroke}
+\end{figure}
+
+\begin{figure}[h]
+	\caption{Čia vaizduojama ornitopterio kilimo aukšyn koeficientas duotiems duomenims. Raudona linija vaizduoja kilimo koeficientą mosto žemyn metu, mėlyna - sklendimo, o žalia - mosto aukštyn metu. Atvaizduoja kilimo koeficientą c\_l duotam sparnų suskirstymui. Iš grafiko matyti, kad ornitopteris sekmingai kilti aukštyn negali, tačiau gali išsilaikyti ore kurį laiką. Tikri lėktuvai dažniausiai siekia nuo 1,2 iki 1,7 kilimo koeficiento skrydžio metu}
+	\centering
+	\includegraphics{img/pav1} 
+\end{figure}
+
+\begin{figure}[h]
+	\caption{Ornitopterio sparnus veikiantis vėjo tą pačia kryptimi greitis. Raudona linija vaizduoja vėjo stiprumą mosto žemyn metu, mėlyna - sklendimo, o žalia - mosto aukštyn metu. Atvaizduoja vėjo greitį v\_i duotam sparnų suskirstymui, matuojama m/s. Jeigu sparnai suskirstyti į 4 dalis, viso plasnojimo metu veikiančio greičio dydis išlieka pastovus (t.y apie 0,4 m/s)}
+	\centering
+	\includegraphics{img/downwind} 
+\end{figure}
+
+\begin{figure}[h]
+	\caption{Sparno incidentumo kampas. Raudona linija vaizduoja incidentumo kampą mosto žemyn metu, mėlyna - sklendimo, o žalia - mosto aukštyn metu. Sparno incidentumo kampas nusako kampą tarp sparno stygos(sparno skirsnio) ir į jį ateinančio oro srauto. Duomenys vaizduoja kampo priklausomybę įvairiems sparnų suskirstymams. Kadangi mūsų sparnas yra ploščias, šie duomenys labai iškraipyti}
+	\includegraphics{img/angle} 
+\end{figure}
+
+\section{Ornitopterio grandinės schema} 
+\begin{figure}[h]
+	\caption{Schemoje atvaizduojama: arduino mikrokontroleris, iš 9 kaištuko einantis laidas į  30 omų rezistorių, iš rezistoriaus einantis laidas į motorą ir iš motoro einantis laidas į GND kaištuką (įžeminimą)}
+	\centering
+	\includegraphics{img/scheme}\\
+\end{figure}
 
 \section{Dar šiek tiek teorijos}
-\subsection{Darbas su Bandomąja lenta}
+\subsection{Darbas su bandomąja lenta}
 Testuojant grandinę ir į ją ieinančius elementus, labai praverčia bandomoji lenta: prietaisas, leidžiantis sujungti komponentes į grandinę be papildomo litavimo. Breadbord'as yra stačiakampė plastikinė plokštė, kurioje lygiais intervalais išsidėsčiusios skylutės. Šią plokšę dažnai skiria trys grioveliai: du viršuje ir apačioje, ir vienas per vidurį. Išorinės eilės jungiasi viena su kita horizontaliai. Viena eilutė skirta teigiamai, kita neigiamai išeičiai/įeičiai. Per vidurį esančios eilės skylučiu yra skirtos komponentėms jungti. Visos skylutės, esančios viename stulpelyje, yra sujungtos. Per vidurį einantis griovelis atskiria šias dvi eiles skylučių. Naudodami bandomąją lentą galime labai paprastai viską sujungti tiek nuosekliai, tiek lygiagrečiai.\\
 
-\includegraphics{img/breadboard}\\
-Elementų sujungimą tarpusavy palengvina laidai su antgaliais, vadinamais „jump'eriais“. Jie būna trijų jungimo tipų: vyras/vyras, vyras/moteris, moteris/moteris. Antgalis-vyras turi metalini strypelį, kuris įkišamas į bandomosios lentos skylutes arba antgalius-moteris. Antgalis-moteris yra naudojamas kaip ir jungtis ant bandomosios lentos. Su šiuo antgaliu galime prijungti kitas elektronines detales tiesiogiai.\\
-\includegraphics[scale=3]{img/jumperwire}\\
+\begin{figure}[h]
+	\caption{Bandomoji lenta (breadboard) ir kaip joje tarpusavyje sujungtos skylutės.} 
+	\centering
+	\includegraphics{img/breadboard}\cite{8}
+\end{figure}
+
+Elementų sujungimą tarpusavy palengvina laidai su antgaliais, vadinamais „jumper'iais“. Jie būna trijų jungimo tipų: vyras/vyras, vyras/moteris, moteris/moteris. Antgalis-vyras turi metalini strypelį, kuris įkišamas į bandomosios lentos skylutes arba antgalius-moteris. Antgalis-moteris yra naudojamas kaip ir jungtis ant bandomosios lentos. Su šiuo antgaliu galime prijungti kitas elektronines detales tiesiogiai.\\
+
+\begin{figure}[h]
+	\caption{Laidai su antgaliais (jumper wires)} 
+	\centering
+	\includegraphics[scale=3]{img/jumperwire}\cite{9}
+\end{figure}
+
+\pagebreak
+
 
 \subsection{Komponenčių fizinių duomenų matavimas naudojantis multimetru}
-\includegraphics{img/multimeter}\\
+
+\begin{figure}[h]
+	\caption{Multimetras}
+	\centering
+	\includegraphics{img/multimeter}\cite{10}\\
+\end{figure}
+
 Multimetras - įrankis, skirtas įvairiems dydžiams matuoti. Elektronikoje naudojamas multimetras dažniausiai turi šiuos matavimo rėžimus: Amperų matavimas, Voltų matavimas, Omų (varžos) matavimas ir grandinės uždarumo matavimas. Šiuolaikiniai multimetrai turi ir kitokių matavimo rėžimų, tačiau pagrindiniai išlieka paminėtieji. Matavimai atliekami taip: pirma, nustatoma multimetro padėtis į vieną iš rėžimų. Kiekvienas rėžimas skirstomas į reikšmes, iki kurių multimetras gali matuoti. Jeigu norimo matuoti dydžio reikšmė visiškai nežinoma, pradedama nuo didžiausios reikšmės ir mažinama tol, kol skaičiai priartėja prie vienos iš reikšmių arčiausiai. Antra, matavimo laidai yra pridedami prie testuojamo prietaiso/komponento galų taip, kad susidarytu grandinė. Trečia, priklausomai nuo testavimo rėžimo, galimai reikia prijungti viską prie elektros šaltinio. Jeigu multimetro ekrane rodomas klaidos pranešimas arba "1    " (skirtingi gamintojai skirtingai žymi), reiškia, kad matuojama reikšmė yra didesnė, negu pasirinkta reikšme ant multimetro. Jeigu reikšmė - nulis arba labai maža, grįžtame į pirmą žingsnį ir sumažime rėžimo reikšmę. Taip darome tol, kol pasiekiame mažiausią reikšmę, arba kai pirmą kartą pasiekiame klaidą. Pirmuoju atvėju tiksliau pamatuoti su šiuo multimetru neišeis, o kitu atvėju grįžtame į aukštesnį multimetro matavimo rėžimo tikslumą ir pamatuojame reikšmę. Tada mes esame užtikrinti, kad multimetras rodys tiksliausius rodmenis. Grandinės uždarumo rėžimas nereikalauja elektros šaltinio. Šio rėžimo metu yra siunčiama srovė iš multimetro ir laukiama jos grįžtant atgal į multimetrą. Jeigu srovė grįžta, multimetras skleidžia cypimo garsą, o jeigu ne, tai jokio garso nėra. Šio rėžimo pagalba taip pat galime nustatyti komponentų ypatingas savybes (pvz.: ar tranzistorius yra PNP, ar NPN tipo). Šių savybių nustatymo metu garsas nėra skleidžiamas, ir rodomi skaičiai ekrane. Šių skaičių reikšmė kiekvienam elementui yra skirtinga.
 
 \section{Naudotos detalės}
@@ -77,10 +132,10 @@ Roboto karkasui panaudota detalė iš  „Nine Eagles“ motoro rinkinio sudaro 
 Roboto valdymui naudojamas Arduino mikrokontroleris.
 
 \subsection{Mikrokontroleris}
-Arduino Pro Mini yra „ATmega328“ (vieno lusto mikrokontroleris) besinaudojanti mikrokontrolerio plokštė. Ji turi 14 skaitmeninių įvesties / išvesties kaiščių (iš kurių 6 gali būti naudojami kaip PWM išėjimai), 6 analoginius įėjimus, joje įrengtą rezonatorių, perkrovimo mygtuką ir angas tvirtinimui prie kaiščių. Šeši kaiščiai gali būti prijungiami prie FTDI kabelio arba USB adapterio teikti maitinimą plokštei.\cite{ArduinoDok}
+Arduino Pro Mini yra „ATmega328“ (vieno lusto mikrokontroleris) besinaudojanti mikrokontrolerio plokštė. Ji turi 14 skaitmeninių įvesties / išvesties kaiščių (iš kurių 6 gali būti naudojami kaip PWM išėjimai), 6 analoginius įėjimus, joje įrengtą rezonatorių, perkrovimo mygtuką ir angas tvirtinimui prie kaiščių. Šeši kaiščiai gali būti prijungiami prie FTDI kabelio arba USB adapterio teikti maitinimą plokštei.\cite{6}
 
 \subsection{Motoras}
-„Nine Eagles“ 10g sveriantis mini motoras, priimantis 3,7V ir 110mAh. „Nine Eagles“ specializuojasi dronų kūrime ir gamina itin lengvus ir sąlyginai galingus motorus.
+„Nine Eagles“ 10g sveriantis mini motoras, priimantis 3,7V ir 110mAh. „Nine Eagles“ specializuojasi dronų kūrime ir gamina itin lengvus ir sąlyginai galingus motorus. 
 
 \section{Programos kodas}
 
@@ -136,24 +191,51 @@ Prototipas buvo sukurtas po daugelio bandymų. Dizainas, prie kurio buvo pasilik
 https://www.youtube.com/watch?v=qNnkbspvHCc
 
 \begin{thebibliography}{9}
-	\bibitem{dummy} 
+	\bibitem{1} 
 	John Nussey.
 	\textit{Arduino For Dummies}. 
 	1993.
 	
-	\bibitem{Rabiger} 
+	\bibitem{2} 
 	Horst Räbiger. 
-	\textit{Zur Elektrodynamik bewegter K{\"o}rper}. (German) 
-	[\textit{On the electrodynamics of moving bodies}]. 
+	\textit{Wie Ornithopter fliegen. Aerodynamik und Dynamik großer Schlagflügelmodelle}. (German) 
+	[\textit{How Ornithopters fly. Aerodynamics and Dynamics of big-wing models}]. 
 	Annalen der Physik, 322(10):891–921, 1905.
 	
-	\bibitem{usermanual} 
+	\bibitem{3}
+	Horst Räbiger. 
+	\textit{How Ornithopters fly. Official website}
+	\\\texttt{http://www.ornithopter.de/english/handbook.htm}
+	
+	\bibitem{4}
+	Horst Räbiger. Orni1 Tool
+	\\\texttt{http://www.ornithopter.de/english/data/orni1\_en.xlsx}
+	
+	\bibitem{5} 
 	„RF Spectrum Analyzer - Made in Germany“, vartotojo vadovas.
 	\\\texttt{https://www.manualslib.com/manual/1009966/Pro-Skit-Mt-1232.html?page=3}
 	
-	\bibitem{doc} 
+	\bibitem{6} 
 	Arduino dokumentacija.
 	\\\texttt{https://www.arduino.cc/en/Main/ArduinoBoardProMini}
+	
+	\bibitem{7}
+	Horst Räbiger.
+	\textit{Skrydžio aerodinamikos schema}\\
+	\texttt{http://www.ornithopter.de/english/images/handbook/vortex\_k.gif}
+	
+	\bibitem{8}
+	Breadboard (bandomoji lenta)\\
+	\texttt{http://robotechshop.com/wp-content/uploads/2016/01/bread-board.jpg}
+	
+	\bibitem{9}
+	Jumper wires.\\
+	\texttt{http://media.rs-online.com/t\_large/F7916454-01.jpg}
+	
+	\bibitem{10}
+	Multimetras.\\
+	\texttt{https://www.walmart.com/ip/Innova-3300-Equus-3300-Hands-free-Digital-Multimeter/14644665}
+	
 	
 \end{thebibliography}
 

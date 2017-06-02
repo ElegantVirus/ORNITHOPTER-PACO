@@ -2146,6 +2146,13 @@
     <bcf:datasource type="file" datatype="bibtex">bibliografija.bib</bcf:datasource>
   </bcf:bibdata>
   <bcf:section number="0">
-    <bcf:citekey order="1">ArduinoDok</bcf:citekey>
+    <bcf:citekey order="1">2</bcf:citekey>
+    <bcf:citekey order="2">7</bcf:citekey>
+    <bcf:citekey order="3">3</bcf:citekey>
+    <bcf:citekey order="4">4</bcf:citekey>
+    <bcf:citekey order="5">8</bcf:citekey>
+    <bcf:citekey order="6">9</bcf:citekey>
+    <bcf:citekey order="7">10</bcf:citekey>
+    <bcf:citekey order="8">6</bcf:citekey>
   </bcf:section>
 </bcf:controlfile>
